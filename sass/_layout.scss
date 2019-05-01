@@ -33,7 +33,7 @@ img {
 
 // header
 .header {
-	background-image: url('/images/header_desktop.png');
+	background-image: url('../images/header_desktop.png');
 	height: 420px;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -41,7 +41,7 @@ img {
 
 	// 斷點設計：768px for iPad, 767px(以下) for Mobile
 	@include mobile767() {
-		background-image: url('/images/header_mobile.png');
+		background-image: url('../images/header_mobile.png');
 		position: relative;
 	}
 

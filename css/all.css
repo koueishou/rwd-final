@@ -558,14 +558,14 @@ img {
   margin: 0 auto; }
 
 .header {
-  background-image: url("/images/header_desktop.png");
+  background-image: url("../images/header_desktop.png");
   height: 420px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
   @media (max-width: 767px) {
     .header {
-      background-image: url("/images/header_mobile.png");
+      background-image: url("../images/header_mobile.png");
       position: relative; } }
   .header .topbar {
     background-color: rgba(0, 0, 0, 0.75); }
@@ -809,7 +809,7 @@ img {
           width: 100%; } }
     .content-index .chef .chef-photo {
       display: block;
-      background-image: url("/images/main_chef_brown.png");
+      background-image: url("../images/main_chef_brown.png");
       height: 460px;
       background-repeat: no-repeat;
       background-position: center center; }
@@ -897,7 +897,7 @@ img {
     .content-index .position .map {
       float: left;
       width: 50%;
-      background-image: url("/images/Map.png");
+      background-image: url("../images/Map.png");
       height: 386px;
       background-size: cover; }
       @media (max-width: 767px) {
@@ -1220,13 +1220,13 @@ img {
           .content-cart .main .meals li .product .ribbon .small::after {
             right: 0; }
       .content-cart .main .meals li .product-1 {
-        background-image: url("/images/product_1.png"); }
+        background-image: url("../images/product_1.png"); }
       .content-cart .main .meals li .product-2 {
-        background-image: url("/images/product_2.png"); }
+        background-image: url("../images/product_2.png"); }
       .content-cart .main .meals li .product-3 {
-        background-image: url("/images/product_3.png"); }
+        background-image: url("../images/product_3.png"); }
       .content-cart .main .meals li .product-4 {
-        background-image: url("/images/product_4.png"); }
+        background-image: url("../images/product_4.png"); }
       .content-cart .main .meals li .detail {
         padding: 10px;
         text-align: center; }
