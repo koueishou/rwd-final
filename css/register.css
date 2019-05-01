@@ -1,0 +1,107 @@
+.content-register {
+  background-color: #efe9e7;
+  padding-top: 50px;
+  padding-bottom: 25px; }
+  .content-register .form-register {
+    max-width: 620px;
+    margin: 0 auto; }
+    @media (max-width: 767px) {
+      .content-register .form-register {
+        max-width: 300px; } }
+    .content-register .form-register h2 {
+      color: #3d1101;
+      font-weight: bold;
+      padding-bottom: 5px;
+      text-align: center; }
+    .content-register .form-register span {
+      color: #3d1101;
+      font-weight: bold;
+      font-size: 20px;
+      display: block;
+      text-align: center;
+      margin-bottom: 35px; }
+    .content-register .form-register form {
+      border-top: 3px solid #ff5e45;
+      padding: 15px;
+      -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+      box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16); }
+      .content-register .form-register form h4 {
+        color: #3d1101;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        padding-bottom: 16px; }
+      .content-register .form-register form .terms-box {
+        float: left;
+        width: 50%;
+        padding-right: 20px; }
+        @media (max-width: 767px) {
+          .content-register .form-register form .terms-box {
+            float: none;
+            width: 100%;
+            padding: 0;
+            padding-bottom: 16px; } }
+        .content-register .form-register form .terms-box p {
+          font-family: MicrosoftJhengHeiRegular;
+          font-size: 18px;
+          color: #3d1101;
+          overflow-wrap: break-word;
+          word-break: break-all; }
+        .content-register .form-register form .terms-box p:nth-child(1) {
+          line-height: 1.5;
+          padding-bottom: 3px; }
+          @media (max-width: 767px) {
+            .content-register .form-register form .terms-box p:nth-child(1) {
+              text-align: center; } }
+      .content-register .form-register form .form-box {
+        float: right;
+        width: 50%; }
+        @media (max-width: 767px) {
+          .content-register .form-register form .form-box {
+            float: none;
+            width: 100%; } }
+        .content-register .form-register form .form-box label {
+          color: #3d1101;
+          font-weight: bold; }
+        .content-register .form-register form .form-box input.use-icon {
+          text-indent: 22px; }
+        .content-register .form-register form .form-box .email-box {
+          position: relative; }
+          .content-register .form-register form .form-box .email-box input[type="email"] {
+            width: 100%;
+            margin-bottom: 15px; }
+          .content-register .form-register form .form-box .email-box > i {
+            position: absolute;
+            top: 7.005px;
+            left: 10px;
+            color: rgba(61, 17, 0, 0.5); }
+        .content-register .form-register form .form-box .pwd-box {
+          position: relative; }
+          .content-register .form-register form .form-box .pwd-box input[type="password"] {
+            width: 100%; }
+          .content-register .form-register form .form-box .pwd-box > i {
+            position: absolute;
+            top: 7.005px;
+            left: 10px;
+            color: rgba(61, 17, 0, 0.5); }
+        .content-register .form-register form .form-box .pwd-box:nth-child(even) {
+          padding-bottom: 12px; }
+        .content-register .form-register form .form-box .had-account {
+          font-family: MicrosoftJhengHeiRegular;
+          color: #fe5e45;
+          display: block;
+          width: 98px;
+          margin-bottom: 30px;
+          font-size: 14px;
+          line-height: 1.4; }
+        .content-register .form-register form .form-box .form-btn {
+          display: inline-block;
+          color: #fff;
+          padding: 9px 48.5px;
+          border-radius: 3px;
+          font-size: 14px;
+          font-family: PingFangTC-Regular;
+          vertical-align: middle; }
+        .content-register .form-register form .form-box .btn-register {
+          background-color: #f56c23;
+          float: right; }

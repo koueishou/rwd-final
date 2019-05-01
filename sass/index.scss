@@ -1,0 +1,403 @@
+@import 'grid';
+
+// index.html 的 content
+.content-index {
+    background-color: #efe9e7;
+
+    // content - spec
+    .spec {
+        padding: 50px 32px 50px 32px;
+        color: #3D1101;
+
+        @include pad() {
+            padding: 50px 0px 50px 0px;
+        }
+
+        .spec-text {
+            text-align: center;
+            padding-bottom: 31px;
+
+            h4 {
+                display: inline-block;
+                margin: 0 auto;
+                font-size: 20px;
+                line-height: 32px;
+                position: relative;
+            }
+
+            h4::before {
+                content: ' ';
+                width: 120px;
+                height: 1px;
+                background-color: #979797;
+                position: absolute;
+                top: 32px;
+                right: 213px;
+
+                @include mobile767() {
+                    width: 0;
+                }
+            }
+
+            h4::after {
+                content: ' ';
+                width: 120px;
+                height: 1px;
+                background-color: #979797;
+                position: absolute;
+                top: 32px;
+                left: 213px;
+
+                @include mobile767() {
+                    width: 0;
+                }
+            }
+        }
+
+        li {
+            float: left;
+            width: 33.33333%;
+            padding-right: 30px;
+            padding-left: 30px;
+
+            @include mobile767() {
+                float: none;
+                width: 100%;
+                padding-bottom: 30px;
+            }
+
+            img {
+                border-radius: 200px;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+
+            h5 {
+                text-align: center;
+                padding-bottom: 11px;
+                font-size: 18px;
+            }
+
+            p {
+                line-height: 1.35;
+            }
+        }
+
+        li:nth-child(2) {
+            @include mobile767() {
+                padding-bottom: 40px;
+            }
+        }
+
+        li:nth-child(3) {
+            @include mobile767() {
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    // content - chef
+    .chef {
+        background-color: #3D1101;
+        padding-left: 42px;
+        padding-right: 77px;
+
+        // 原本是 pad(768), 但為了多兼容 iPhoneX 橫式, 改成 812px
+        @include iPhoneX-h() {
+            padding-left: 10px;
+            padding-right: 30px;
+        }
+
+        @include GalaxyS5-h() {
+            padding-right: 10px;
+        }
+
+        @include iPhone5-h() {
+            padding: 0;
+        }
+
+        li {
+            float: left;
+            width: 50%;
+
+            @include iPhone5-h() {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        .chef-photo {
+            display: block;
+            background-image: url('/images/main_chef_brown.png');
+            // width: 470px;
+            height: 460px;
+            background-repeat: no-repeat;
+            // background-size: cover;
+            background-position: center center;
+        }
+
+        .chef-intro {
+            color: #EFE9E7;
+            padding-top: 81px;
+            padding-left: 25px;
+
+            @include iPhoneX-h() {
+                padding-top: 49px;
+            }
+
+            @include GalaxyS5-h() {
+                padding-top: 30px;
+            }
+
+            @include iPhone5-h() {
+                padding: 30px;
+            }
+
+            h4 {
+                font-size: 20px;
+                line-height: 32px;
+            }
+
+            p {
+                @include GalaxyS5-h() {
+                    word-wrap: break-word;
+                    word-break: break-all;
+                }
+            }
+
+            p:nth-child(2) {
+                padding-bottom: 16px;
+                line-height: 20px;
+            }
+
+            p:nth-child(3) {
+                line-height: 1.35;
+            }
+        }
+    }
+
+    // content - comment
+    .comment {
+        padding: 50px 32px 50px 32px;
+        color: #3D1101;
+
+        @include pad() {
+            padding: 50px 0px 50px 0px;
+        }
+
+        h4 {
+            font-size: 24px;
+            text-align: center;
+            padding-bottom: 32px;
+        }
+
+        li {
+            float: left;
+            width: 33.33333%;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+
+            @include mobile767() {
+                float: none;
+                width: 100%;
+            }
+
+            img {
+                display: block;
+                // float: left;
+                border-radius: 67px;
+                height: 100%;
+            }
+
+            div {
+                // float: left;
+                // width: 155px;
+                padding-left: 13px;
+
+                p {
+                    line-height: 24px;
+                }
+
+                p:nth-child(1) {
+                    font-size: 18px;
+                    padding-top: 21.5px;
+                    padding-bottom: 21.5px;
+                }
+
+                p:nth-child(2) {
+                    padding-bottom: 16px;
+                }
+
+                p:nth-child(3) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    // content - position
+    .position {
+        background: rgba(250, 250, 250, 0.70);
+        padding: 50px 42px 50px 42px;
+
+        @include pad() {
+            padding: 50px 10px 50px 10px;
+        }
+
+        @include mobile767() {
+            padding: 43px 10px 50px 10px;
+        }
+
+        h4 {
+            font-size: 24px;
+            color: #3D1101;
+            text-align: center;
+            padding-bottom: 38px;
+            line-height: 32px;
+
+            @include mobile767() {
+                padding-bottom: 30px;
+            }
+        }
+
+        .map {
+            float: left;
+            width: 50%;
+            background-image: url('/images/Map.png');
+            height: 386px;
+            background-size: cover;
+
+            @include mobile767() {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        form {
+            float: left;
+            padding-left: 20px;
+            width: 50%;
+            color: #3d1101;
+            font-size: 14px;
+
+            @include mobile767() {
+                float: none;
+                width: 100%;
+                padding-top: 30px;
+                padding-left: 0px;
+            }
+
+            label {
+                padding: 0;
+                margin: 0;
+                padding-bottom: 6px;
+                line-height: 20px;
+            }
+
+            input#name,
+            input#phone,
+            input#email,
+            input#number {
+                margin: 0;
+                padding: 0;
+                padding: 5px 0px 5px 14px;
+
+                background: #FFFFFF;
+                border: 1px solid #CCCCCC;
+                box-shadow: inset 0px 1px 0px 0px #ECECEC;
+                border-radius: 3px;
+                width: 100%;
+
+                font-size: 16px;
+                line-height: 22px;
+
+                margin-bottom: 12px;
+            }
+
+            .veg-box {
+                padding-bottom: 30px;
+
+                span {
+                    display: block;
+                    float: left;
+                }
+
+                input#Veg {
+                    display: block;
+                    float: left;
+                    margin: 0;
+                    padding: 0;
+                    width: 16px;
+                    height: 16px;
+                    margin-left: 3px;
+                    position: relative;
+                }
+
+                span:nth-child(3) {
+                    margin-left: 36px;
+                }
+            }
+
+            // 更改 radio 樣式
+            input[type='radio']:after,
+            input[type='radio']:checked:after {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                border-radius: 15px;
+                background-color: #F6F4F3;
+                content: '';
+                visibility: visible;
+                border: 1px solid #9B9B9B;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+
+            input[type='radio']:checked:after {
+                border: 1px solid #4A90E2;
+            }
+
+            input[type='radio']:checked:before {
+                display: inline-block;
+                width: 50%;
+                height: 50%;
+                border-radius: 15px;
+                background-color: #4A90E2;
+                content: '';
+                visibility: visible;
+                border: 0px solid #4A90E2;
+                position: absolute;
+                top: 4.495px;
+                left: 4.495px;
+                z-index: 9;
+            }
+
+            // 按鈕樣式
+            .form-btn {
+                display: inline-block;
+                color: #fff;
+                padding: 6px 21px;
+                border-radius: 3px;
+                font-size: 14px;
+                line-height: 20px;
+                font-family: PingFangTC-Regular;
+                vertical-align: middle;
+            }
+
+            .btn-cancel {
+                background-color: #9b9796;
+                float: right;
+            }
+
+            .btn-send {
+                background-color: #f56c23;
+                margin-left: 11px;
+                float: right;
+            }
+        }
+    }
+
+}

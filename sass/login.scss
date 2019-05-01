@@ -1,0 +1,127 @@
+$fontcolor: #3d1101;
+
+@import 'grid';
+
+.content-login {
+    background-color: #efe9e7;
+    padding-top: 50px;
+    padding-bottom: 25px;
+
+    .form-login {
+        max-width: 300px;
+        margin: 0 auto;
+
+        // 六角西餐廳
+        h2 {
+            color: $fontcolor;
+            font-weight: bold;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        // 享受美食好味道
+        span {
+            color: $fontcolor;
+            font-weight: bold;
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        form {
+            border-top: 3px solid #ff5e45;
+            padding: 15px;
+            box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+
+            // LOGIN
+            h4 {
+                color: $fontcolor;
+                font-weight: bold;
+                font-size: 18px;
+                text-align: center;
+                padding-bottom: 16px;
+            }
+
+            label {
+                color: $fontcolor;
+                font-weight: bold;
+            }
+
+            input.use-icon {
+                text-indent: 22px;
+            }
+
+            // Email
+            .email-box {
+                // 設定 input 裡面的小圖示
+                position: relative;
+
+                input[type="email"] {
+                    // width: 270px;
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+
+                >i {
+                    position: absolute;
+                    top: 7.005px;
+                    left: 10px;
+                    color: rgba(61, 17, 0, 0.50);
+                }
+            }
+
+            // Password
+            .pwd-box {
+                // 設定 input 裡面的小圖示
+                position: relative;
+
+                input[type="password"] {
+                    // width: 270px;
+                    width: 100%;
+                }
+
+                >i {
+                    position: absolute;
+                    top: 7.005px;
+                    left: 10px;
+                    color: rgba(61, 17, 0, 0.50);
+                }
+            }
+
+            // 忘記密碼
+            .forgot-pwd {
+                font-family: MicrosoftJhengHeiRegular;
+                color: #fe5e45;
+                display: block;
+                width: 73px;
+                margin-bottom: 30px;
+                font-size: 14px;
+                line-height: 1.4;
+            }
+
+            // Button
+            // 按鈕樣式
+            .form-btn {
+                display: inline-block; // to solve margin collapse
+                color: #fff;
+                padding: 9px 48.5px;
+                border-radius: 3px;
+                font-size: 14px;
+                font-family: PingFangTC-Regular;
+                vertical-align: middle;
+            }
+
+            // 註冊按鈕
+            .btn-register {
+                background-color: #9b9796;
+            }
+
+            // 登入按鈕
+            .btn-login {
+                background-color: #f56c23;
+                margin-left: 16px;
+            }
+        }
+    }
+}

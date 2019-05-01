@@ -1,0 +1,75 @@
+.content-login {
+  background-color: #efe9e7;
+  padding-top: 50px;
+  padding-bottom: 25px; }
+  .content-login .form-login {
+    max-width: 300px;
+    margin: 0 auto; }
+    .content-login .form-login h2 {
+      color: #3d1101;
+      font-weight: bold;
+      padding-bottom: 5px;
+      text-align: center; }
+    .content-login .form-login span {
+      color: #3d1101;
+      font-weight: bold;
+      font-size: 20px;
+      display: block;
+      text-align: center;
+      margin-bottom: 35px; }
+    .content-login .form-login form {
+      border-top: 3px solid #ff5e45;
+      padding: 15px;
+      -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+      box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16); }
+      .content-login .form-login form h4 {
+        color: #3d1101;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        padding-bottom: 16px; }
+      .content-login .form-login form label {
+        color: #3d1101;
+        font-weight: bold; }
+      .content-login .form-login form input.use-icon {
+        text-indent: 22px; }
+      .content-login .form-login form .email-box {
+        position: relative; }
+        .content-login .form-login form .email-box input[type="email"] {
+          width: 100%;
+          margin-bottom: 15px; }
+        .content-login .form-login form .email-box > i {
+          position: absolute;
+          top: 7.005px;
+          left: 10px;
+          color: rgba(61, 17, 0, 0.5); }
+      .content-login .form-login form .pwd-box {
+        position: relative; }
+        .content-login .form-login form .pwd-box input[type="password"] {
+          width: 100%; }
+        .content-login .form-login form .pwd-box > i {
+          position: absolute;
+          top: 7.005px;
+          left: 10px;
+          color: rgba(61, 17, 0, 0.5); }
+      .content-login .form-login form .forgot-pwd {
+        font-family: MicrosoftJhengHeiRegular;
+        color: #fe5e45;
+        display: block;
+        width: 73px;
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 1.4; }
+      .content-login .form-login form .form-btn {
+        display: inline-block;
+        color: #fff;
+        padding: 9px 48.5px;
+        border-radius: 3px;
+        font-size: 14px;
+        font-family: PingFangTC-Regular;
+        vertical-align: middle; }
+      .content-login .form-login form .btn-register {
+        background-color: #9b9796; }
+      .content-login .form-login form .btn-login {
+        background-color: #f56c23;
+        margin-left: 16px; }

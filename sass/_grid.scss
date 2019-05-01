@@ -1,0 +1,47 @@
+// Pixel 2 XL 橫式
+@mixin Pixel2XL-h {
+    @media (max-width: 823px) {
+        @content;
+    }
+}
+
+// iPhone X 橫式
+@mixin iPhoneX-h {
+    @media (max-width: 812px) {
+        @content;
+    }
+}
+
+// iPad
+@mixin pad {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile767 {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+// Galaxy S5 橫式
+@mixin GalaxyS5-h {
+    @media(max-width: 640px) and (min-width: 568px){
+        @content;
+    }
+}
+
+// iPhone5/SE 橫式
+@mixin iPhone5-h {
+    @media (max-width: 567px) {
+        @content;
+    }
+}
+
+// iPhone5/SE 直式
+@mixin iPhone5 {
+    @media (max-width: 320px) {
+        @content;
+    }
+}

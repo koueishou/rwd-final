@@ -1,0 +1,388 @@
+@import 'grid';
+
+.content-cart {
+    background-color: #EFE9E7;
+    color: #3D1101;
+    padding: 50px 42px 25px 42px;
+    display: flex;
+
+    @include Pixel2XL-h() {
+        padding: 50px 10px 25px 10px;
+    }
+
+    @include mobile767() {
+        flex-direction: column;
+    }
+
+    // content - sidebar
+    .sidebar {
+        min-width: 240px;
+        padding-right: 20px;
+
+        @include mobile767() {
+            width: 100%;
+            padding-right: 0px;
+            padding-bottom: 22px;
+        }
+
+        .sidebar-title {
+            padding-bottom: 16px;
+
+            span {
+                float: left;
+            }
+
+            .fa-leaf::before {
+                font-size: 32px;
+            }
+
+            h4 {
+                padding-left: 15px;
+                font-size: 20px;
+                line-height: 32px;
+                float: left;
+            }
+        }
+
+        li {
+            background: transparent;
+            border-bottom: 1px solid #3D1101;
+
+            a {
+                display: block;
+                padding-left: 10px;
+                color: #3D1101;
+                font-size: 16px;
+                line-height: 32px;
+            }
+
+            a:hover {
+                // 滑鼠滑過連結時背景色為紅色
+                color: #FFFFFF;
+                background: #3D1101;
+
+                @include mobile767() {
+                    pointer-events: none;
+                }
+            }
+        }
+
+        li.clicked a {
+            color: #FFFFFF;
+            background: #3D1101;
+        }
+    }
+
+    // sidebar - main
+    .main {
+
+        // main - main-topbar
+        .main-topbar {
+            padding-bottom: 26px;
+
+            // main-topbar - search
+            .search {
+                float: left;
+
+                @include mobile767() {
+                    float: none;
+                }
+
+                input#search {
+                    // width: 424px;
+                    width: 442px;
+                    height: 32px;
+                    background: transparent;
+                    border: 2px solid #3D1101;
+                    text-indent: 10px;
+                    float: left;
+
+                    @include Pixel2XL-h() {
+                        width: 300px;
+                    }
+
+                    @include mobile767() {
+                        width: calc(100% - 36px);
+                    }
+                }
+
+                input#search:hover,
+                input#search:focus,
+                input#search:active {
+                    outline: none;
+                }
+
+                a {
+                    float: left;
+                }
+
+                .icon {
+                    background-color: #3D1101;
+                    color: #FFFFFF;
+                    font-size: 19px;
+                    padding: 6.5px 8.5px;
+                }
+            }
+
+            // main-topbar - payment
+            .payment {
+                float: right;
+
+                @include mobile767() {
+                    padding-top: 15px;
+                }
+
+                li {
+                    float: left;
+
+                    a {
+                        color: #3D1101;
+                    }
+                }
+
+                li:nth-child(1) {
+                    a {
+                        line-height: 32px;
+                        padding-left: 12px;
+                        padding-right: 12px;
+                        border-right: 1px solid #3D1101;
+                    }
+                }
+
+                li:nth-child(2) {
+                    position: relative; // 購物車的紅點
+
+                    a {
+                        padding-left: 17px;
+                        padding-right: 17px;
+
+                        @include mobile767() {
+                            padding-right: 6px;
+                        }
+                    }
+
+                    .fa-shopping-cart:before {
+                        font-size: 29px;
+                        line-height: 32px;
+                    }
+
+                    .cart-num {
+                        position: absolute;
+                        top: 0px;
+                        right: 11px;
+                        display: block;
+                        width: 16px;
+                        height: 16px;
+                        background: #FF5E45;
+                        border: 1px solid #EFE9E7;
+                        border-radius: 50%;
+                        text-align: center;
+                        font-size: 12px;
+                        color: #fff;
+
+                        @include mobile767() {
+                            right: 0px;
+                        }
+                    }
+                }
+            }
+        }
+
+        // main - meals
+        .meals {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @include Pixel2XL-h() {
+                justify-content: space-around;
+            }
+
+            @include mobile767() {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                background: #EFE9E7;
+                box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+                margin-bottom: 30px;
+                width: 220px;
+
+                @include mobile767() {
+                    width: 300px;
+                }
+
+                // li - product
+                .product {
+                    width: 220px;
+                    height: 120px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    position: relative;
+
+                    @include mobile767() {
+                        width: 300px;
+                    }
+
+                    i {
+                        position: absolute;
+                        color: #FFFFFF;
+                        font-size: 23px;
+                        top: 9px;
+                        left: 9px;
+                        cursor: pointer;
+                    }
+
+                    i:hover {
+                        color: #EA5C5C;
+
+                        @include Pixel2XL-h() {
+                            pointer-events: none;
+                        }
+                    }
+
+                    i.clicked {
+                        color: #EA5C5C;
+                    }
+
+                    // 緞帶
+                    .ribbon {
+                        position: absolute;
+                        z-index: 100;
+                        width: 120px;
+                        height: 120px;
+                        overflow: hidden;
+                        top: -3px;
+                        right: -6px;
+                        color: #5cb85c;
+
+                        .small {
+                            background-size: 100%;
+                            position: absolute;
+                            display: block;
+                            width: 100%;
+                            padding: 8px 16px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            text-shadow: 0 2px 0 #3d8b3d;
+                            font-weight: bold;
+                            font-size: 14px;
+                            color: #fff;
+                            background-color: #00CC99;
+                            transform: rotate(45deg);
+                            box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.5);
+                            top: 16px;
+                            left: 27px;
+                        }
+
+                        .small::before,
+                        .small::after {
+                            position: absolute;
+                            content: " ";
+                            bottom: -3px;
+                            border-top: 3px solid #078F6D;
+                            border-left: 3px solid transparent;
+                            border-right: 3px solid transparent;
+                        }
+
+                        .small::before {
+                            left: 0;
+                        }
+
+                        .small::after {
+                            right: 0;
+                        }
+                    }
+                }
+
+                .product-1 {
+                    background-image: url('/images/product_1.png');
+                }
+
+                .product-2 {
+                    background-image: url('/images/product_2.png');
+                }
+
+                .product-3 {
+                    background-image: url('/images/product_3.png');
+                }
+
+                .product-4 {
+                    background-image: url('/images/product_4.png');
+                }
+
+                // li - detail
+                .detail {
+                    padding: 10px;
+                    text-align: center;
+
+                    h5 {
+                        font-size: 20px;
+                        line-height: 27px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        line-height: 16px;
+                        position: relative;
+                        padding-bottom: 31px;
+                    }
+
+                    p::after {
+                        position: absolute;
+                        content: ' ';
+                        width: 91px;
+                        height: 1px;
+                        background-color: #3D1101;
+                        top: 24px;
+                        left: 53.5px;
+
+                        @include mobile767() {
+                            top: 24px;
+                            left: 93.5px;
+                        }
+                    }
+
+                    span {
+                        display: block;
+                        font-size: 20px;
+                        line-height: 24px;
+                        padding-bottom: 13px;
+                    }
+
+                    a {
+                        display: block;
+                        border: 1.3px solid #FF5E45;
+                        border-radius: 3px;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #FF5E45;
+
+                        .fa-shopping-cart:before {
+                            font-size: 14px;
+                            line-height: 24px;
+                            padding-right: 9px;
+                        }
+                    }
+
+                    a:hover {
+                        color: #EFE9E7;
+                        background: #FF5E45;
+
+                        @include Pixel2XL-h() {
+                            // 取消手機在 hover 無法取消的 bug
+                            pointer-events: none;
+                        }
+                    }
+
+                    a.clicked {
+                        color: #EFE9E7;
+                        background: #FF5E45;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,274 @@
+@import 'grid';
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Microsoft JhengHei, Helvetica;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.wrap {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+// header
+.header {
+	background-image: url('/images/header_desktop.png');
+	height: 420px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+
+	// 斷點設計：768px for iPad, 767px(以下) for Mobile
+	@include mobile767() {
+		background-image: url('/images/header_mobile.png');
+		position: relative;
+	}
+
+	// header - topbar
+	.topbar {
+		background-color: rgba(0, 0, 0, 0.75);
+
+		.logo {
+			float: left;
+			padding: 16px;
+			margin-left: 26px;
+		}
+
+		a,
+		a:visited {
+			color: #fff;
+		}
+
+		// topbar - top-menu
+		.top-menu {
+			float: right;
+
+			@include mobile767() {
+				max-height: 0px;
+				overflow: hidden;
+				transition: max-height 1s;
+				position: absolute;
+				z-index: 100;
+				top: 56px;
+				left: 0;
+				right: 0;
+				background: rgba(0, 0, 0, 0.75);
+			}
+
+			li {
+				float: left;
+
+				@include mobile767() {
+					float: none;
+				}
+
+				a {
+					display: block;
+					padding: 19px 15px 19px 15px;
+					transition: all 0.3s;
+					text-align: center;
+
+					@include mobile767() {
+						transition: all 0.5s;
+						text-align: left;
+						padding: 15px;
+						border-bottom: 1px dashed rgba(255, 94, 69, 0.35);
+					}
+				}
+			}
+
+			li:nth-child(3) a {
+				margin-right: 48px;
+
+				@include mobile767() {
+					margin: 0;
+				}
+			}
+
+			a:hover {
+				border-bottom: 2px solid #fff;
+
+				@include mobile767() {
+					background: #ff5e45;
+					color: #fff;
+					border-bottom: 1px solid transparent;
+				}
+			}
+		}
+
+		// showmenu
+		.showmenu {
+			display: none;
+
+			@include mobile767() {
+				display: block;
+				float: right;
+				margin-top: 16px;
+				margin-right: 22px;
+			}
+		}
+
+		.fa-bars:before {
+			font-size: 24px;
+			/* 自訂圖標大小 */
+		}
+	}
+}
+
+// jQ 點擊後動態在 body 加上 class
+@include mobile767() {
+	.menu-show .header .top-menu {
+		max-height: 500px;
+	}
+}
+
+// header - banner
+.banner {
+	background-color: rgba(0, 0, 0, 0.35);
+	max-width: 460px;
+	margin: 0 auto;
+	margin-top: 67px;
+	color: #fff;
+	text-align: center;
+	padding: 20px 22px 26px 42px;
+
+	@include mobile767() {
+		max-width: 300px;
+		margin-top: 57px;
+		padding: 20px 6px 20px 6px;
+	}
+
+	.font-big {
+		font-size: 36px;
+		padding-bottom: 16px;
+		line-height: 1.35;
+	}
+
+	.font-small {
+		line-height: 1.35;
+	}
+
+	.font-m {
+		display: none;
+
+		@include mobile767() {
+			display: block;
+		}
+	}
+}
+
+// footer
+.footer {
+	background-color: #efe9e7;
+	color: #3d1101;
+	padding: 25px 42px 50px 43px;
+
+	@include pad() {
+		padding: 50px 0px 50px 0px;
+	}
+
+	>div {
+		float: left;
+		width: 33.33333%;
+		vertical-align: top;
+		padding-left: 10px;
+		padding-right: 10px;
+
+		@include mobile767() {
+			float: none;
+			width: 100%;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 30px;
+		}
+	}
+
+	div:nth-child(3) {
+		@include mobile767() {
+			padding-bottom: 0px;
+		}
+	}
+
+	// about
+	.about {
+		p {
+			word-wrap: break-word;
+			word-break: break-all;
+			line-height: 1.35;
+		}
+
+		h5 {
+			font-weight: bold;
+			font-size: 24px;
+			padding-bottom: 15px;
+		}
+	}
+
+	// contact
+	.contact {
+		p {
+			font-weight: bold;
+			font-size: 24px;
+			padding-bottom: 15px;
+		}
+
+		ul {
+			margin-left: 20px;
+
+			li {
+				list-style-type: disc;
+				// 用 inside 的話第三行在 iPhone6/7/8 橫式會跳行
+				list-style-position: outside;
+				line-height: 1.35;
+			}
+		}
+	}
+
+	// link
+	.link {
+		text-align: right;
+
+		>a {
+			display: inline-block;
+			padding-bottom: 22px;
+		}
+
+		ul {
+			li {
+				float: right;
+				margin-right: 12px;
+			}
+
+			li:nth-child(1) {
+				margin-right: 0px;
+			}
+		}
+	}
+
+	.fa-facebook-square:before,
+	.fa-twitter-square:before,
+	.fa-google-plus-square:before {
+		font-size: 36px;
+	}
+}
